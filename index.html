@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Car Renting Company Ltd</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
+    <!--<link rel="stylesheet" href="./css/foundation.min.css">-->
+    <script src="./js/jquery-3.2.1.min.js" charset="utf-8"></script>
+    <script src="./js/jquery.fancybox.min.js" charset="utf-8"></script>
+    <script src="./js/foundation.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(document).ready(()=>{
+        $("#toggle").click(()=>{
+          $('.side-nav').css({
+            'visibility':'visible',
+          }).addClass('nav-slide');
+        })
+        $('#close').click(()=>{
+          $('.side-nav').css({
+            'visibility':'hidden',
+          }).removeClass('nav-slide');
+        })
+        $("[data-fancybox]").fancybox({
+          loop:true
+        });
+        $("#more").click(()=>{
+          let path=$("#available").offset().top;
+          $("body,html").animate({
+            scrollTop:path
+          },1000);
+        })
+        $("#home-alt").click(()=>{
+          let path=$("#showcase").offset().top;
+          $("body,html").animate({
+            scrollTop:path
+          },1000);
+          $('.side-nav').css({
+            'visibility':'hidden',
+          }).removeClass('nav-slide');
+        })
+        $("#cars").click(()=>{
+          let path=$("#available").offset().top;
+          $("body,html").animate({
+            scrollTop:path
+          },1000);
+          $('.side-nav').css({
+            'visibility':'hidden',
+          }).removeClass('nav-slide');
+        })
+        $("#contact").click(()=>{
+          let path=$("#contact").offset().top+200;
+          $("body,html").animate({
+            scrollTop:path
+          },1000);
+          $('.side-nav').css({
+            'visibility':'hidden',
+          }).removeClass('nav-slide');
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <nav>
+      <i class="fa fa-bars fa-2x" id="toggle"></i>
+      <strong>Car Rent Ltd</strong>
+    </nav>
+    <div class="side-nav">
+      <br><br>
+      <i class="fa fa-close fa-2x" style="color:#fff;right:0px;top:0;left:80%;text-align:right;position:relative;" id="close"></i>
+      <a href="#showcase" id="home-alt">Home</a><br>
+      <a href="#available" id="cars">cars</a><br>
+      <a href="#contact" id="contact">Contact</a><br>
+    </div>
+    <section id="showcase">
+      <div class="intro">
+        <img src="./img/car4.jpg" height="200px" width="200px" alt="">
+        <br>
+        We are the best company for Car Rent services in Rwanda... <br><br><br>
+        <a href="#available" id="more"class="btn">View More</a>
+      </div>
+
+
+    </section>
+    <section id="search">
+      <form class="" action="index.html" method="post">
+        <input type="search" class="search-input" value="" placeholder="Search for available cars...">
+        <input type="submit" class="btn-outline" value="Search">
+      </form>
+    </section>
+    <br>
+    <h2 align="center">Available Cars</h2>
+    <br>
+    <section id="available">
+        <div class="">
+          <h4>Chevrolet</h4><br>
+          <a href="./img/car1.jpg" data-fancybox data-caption="Chevrolet">
+            <img src="./img/car1.jpg" height="150px" width="150px"alt="">
+          </a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+          <strong class="price">$80</strong><br><br>
+          <a href="#" class="btn">Order</a>
+        </div>
+        <div class="">
+          <h4>Suzuki</h4><br>
+          <a href="./img/car2.jpg" data-fancybox data-caption="Suzuki">
+            <img src="./img/car2.jpg" height="150px" width="150px"alt="">
+          </a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+          <strong class="price">$35</strong><br><br>
+          <a href="#" class="btn">Order</a>
+        </div>
+        <div class="">
+          <h4>Toyota</h4><br>
+          <a href="./img/car3.jpg" data-fancybox data-caption="Toyota">
+            <img src="./img/car3.jpg" height="150px" width="150px"alt="">
+          </a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+          <strong class="price">$30</strong><br><br>
+          <a href="#" class="btn">Order</a>
+        </div>
+        <div class="">
+          <h4>Lamborghini</h4><br>
+          <a href="./img/car4.jpg" data-fancybox data-caption="Lamborghini">
+            <img src="./img/car4.jpg" height="150px" width="150px"alt="">
+          </a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+          <strong class="price">$50</strong><br><br>
+          <a href="#" class="btn">Order</a>
+        </div>
+        <div class="">
+          <h4>Mercedes Benz</h4><br>
+          <a href="./img/car5.jpg" data-fancybox data-caption="Mercedes Benz">
+            <img src="./img/car5.jpg" height="150px" width="150px"alt="">
+          </a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+          <strong class="price">$60</strong><br><br>
+          <a href="#" class="btn">Order</a>
+        </div>
+        <div class="">
+          <h4>Hyundai</h4><br>
+          <a href="./img/car6.jpg" data-fancybox data-caption="Hyundai">
+            <img src="./img/car6.jpg" height="150px" width="150px"alt="">
+          </a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,  </p>
+          <strong class="price">$70</strong><br><br>
+          <a href="#" class="btn">Order</a>
+        </div>
+        <div class="">
+          <h4>Audi</h4><br>
+          <a href="./img/car7.jpg" data-fancybox data-caption="Audi">
+            <img src="./img/car7.jpg" height="150px" width="150px"alt="">
+          </a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+          <strong class="price">$40</strong><br><br>
+          <a href="#" class="btn">Order</a>
+        </div>
+        <div class="">
+          <h4>Ferrari</h4><br>
+          <a href="./img/car8.jpg" data-fancybox data-caption="Ferrari">
+            <img src="./img/car8.jpg" height="150px" width="150px"alt="">
+          </a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+          <strong class="price">$50</strong><br><br>
+          <a href="#" class="btn">Order</a>
+        </div>
+    </section>
+    <footer id="contact">
+      <h2>Contact Car Rent Ltd</h2><br>
+      <div class="social-links">
+        <i class="fa fa-facebook fa-2x"></i>
+        <i class="fa fa-twitter fa-2x"></i>
+        <i class="fa fa-instagram fa-2x"></i>
+        <i class="fa fa-youtube fa-2x"></i>
+      </div>
+    </footer>
+  </body>
+</html>
