@@ -51,9 +51,9 @@
           }).removeClass('nav-slide');
         })
         $("#contact").click(()=>{
-          let path=$("#contact").offset().top+200;
+          let path2=$("#contact_section").offset();
           $("body,html").animate({
-            scrollTop:path
+            scrollTop:path2
           },1000);
           $('.side-nav').css({
             'visibility':'hidden',
@@ -72,7 +72,7 @@
       <i class="fa fa-close fa-2x" style="color:#fff;right:0px;top:0;left:80%;text-align:right;position:relative;" id="close"></i>
       <a href="#showcase" id="home-alt">Home</a><br>
       <a href="#available" id="cars">cars</a><br>
-      <a href="#contact" id="contact">Contact</a><br>
+      <a href="#contact_section" id="contact">Contact</a><br>
     </div>
     <section id="showcase">
       <div class="intro">
@@ -167,13 +167,13 @@
           <a href="#" class="btn">Order</a>
         </div>
     </section>
-    <footer id="contact">
+    <footer id="contact_section">
       <h2>Contact Car Rent Ltd</h2><br>
       <div class="social-links">
-        <i class="fa fa-facebook fa-2x"></i>
-        <i class="fa fa-twitter fa-2x"></i>
-        <i class="fa fa-instagram fa-2x"></i>
-        <i class="fa fa-youtube fa-2x"></i>
+        <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+        <a href="#"><i class="fa fa-youtube fa-2x"></i></a>
       </div>
     </footer>
   </body>
