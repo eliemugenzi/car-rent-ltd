@@ -6,11 +6,10 @@
     <title>Car Renting Company Ltd</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
-    <!--<link rel="stylesheet" href="./css/foundation.min.css">-->
     <script src="./js/jquery-3.2.1.min.js" charset="utf-8"></script>
     <script src="./js/jquery.fancybox.min.js" charset="utf-8"></script>
-    <script src="./js/foundation.min.js" charset="utf-8"></script>
     <script type="text/javascript">
       $(document).ready(()=>{
         $("#toggle").click(()=>{
@@ -51,7 +50,7 @@
           }).removeClass('nav-slide');
         })
         $("#contact").click(()=>{
-          let path2=$("#contact_section").offset();
+          let path2=$("#contact_section").offset().top;
           $("body,html").animate({
             scrollTop:path2
           },1000);
@@ -64,15 +63,15 @@
   </head>
   <body>
     <nav>
-      <i class="fa fa-bars fa-2x" id="toggle"></i>
-      <strong>Car Rent Ltd</strong>
+      <i class="fa fa-bars fa-2x" id="toggle" style="float:left;"></i>
+      <strong style="float:right;margin-right:8%;">Car Rent Ltd</strong>
     </nav>
     <div class="side-nav">
       <br><br>
       <i class="fa fa-close fa-2x" style="color:#fff;right:0px;top:0;left:80%;text-align:right;position:relative;" id="close"></i>
-      <a href="#showcase" id="home-alt">Home</a><br>
-      <a href="#available" id="cars">cars</a><br>
-      <a href="#contact_section" id="contact">Contact</a><br>
+      <a  id="home-alt">Home</a><br>
+      <a  id="cars">Cars</a><br>
+      <a  id="contact">Contact</a><br>
     </div>
     <section id="showcase">
       <div class="intro">
@@ -169,7 +168,7 @@
     </section>
     <footer id="contact_section">
       <h2>Contact Car Rent Ltd</h2><br>
-      <div class="social-links">
+      <div class="social-links container">
         <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
         <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
         <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
